@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDom from 'react-dom'
-import { Provider, connect } from 'react-redux'
-import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
 import HomePage from './view/homePage'
 
 import Reducers from '../store/index'
@@ -9,10 +9,12 @@ import Reducers from '../store/index'
 import './assets/css/defalut.scss'
 import './assets/css/main.scss'
 
+let createStoreWithMiddleware = applyMiddleware()(createStore)
+
 const store = createStore(Reducers)
 
 ReactDom.render(
-  <Provider store={store} key="provider">
+  <Provider store={store}>
     <HomePage />
   </Provider>,
   document.getElementById('app')
