@@ -1,8 +1,8 @@
-import gameType from '../reducer/game'
+import {gameType} from '../reducer/game'
 
-export function moveChange(text) {
+export function moveChange(value) {
   return { 
     type: gameType.NUMBER,
-    payload: text 
+    payload: value 
   }
 }

@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { moveChange } from '../../store/action/game'
+
 import Blaock from '../components/game/block'
 
 class GamePart extends Component {
@@ -323,6 +327,9 @@ class GamePart extends Component {
   }
 
   componentDidMount() {
+    setInterval(() => {
+      console.log(this.props.arr)      
+    }, 1000);
     this.randomNumber()
     let that = this
     document.onkeydown = function (event) {//捕获键盘事件，操作游戏
@@ -351,9 +358,20 @@ class GamePart extends Component {
               <Blaock index={i} key={index} />
             )
           )
-        } </div>
+        }
+      </div>
     )
   }
 }
 
-export default GamePart
+const mapStateToProps = ({game}) => {
+  return {
+    arr: game.number
+  }
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  moveChange: bindActionCreators(moveChange,dispatch),
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(GamePart)
