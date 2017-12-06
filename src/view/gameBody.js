@@ -172,7 +172,7 @@ class GamePart extends Component {
     }) 
   }
 
-  formula(arr,direction) {
+  formula(arr,direction) {//计算的函数
     let newArr = []
     for(let i = 0;i<arr.length;i++) {
       if (arr[i]!=0) {
