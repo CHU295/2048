@@ -7,25 +7,25 @@ class Blaock extends React.Component {
     let style = 'part'
     switch (num) {
       case 2:
-        style = 'part num_2'
+        style = 'part num_2048'
         break;
       case 4:
-        style = 'part num_4'
+        style = 'part num_1024'
         break;
       case 8:
-        style = 'part num_8'
+        style = 'part num_512'
         break;
       case 16:
-        style = 'part num_16'
+        style = 'part num_4096'
         break;
       case 32:
-        style = 'part num_32'
+        style = 'part num_8192'
         break;
       case 64:
-        style = 'part num_64'
+        style = 'part num_16384'
         break;
       case 128:
-        style = 'part num_128'
+        style = 'part num_32768'
         break;
       case 256:
         style = 'part num_256'
