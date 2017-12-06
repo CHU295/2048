@@ -1,5 +1,77 @@
 .home-page {
   width: 100%;
   min-height: 800px;
-  
+  display: flex;
+  justify-content: center;
+  .game-body {
+    width: 500px;
+    height: 500px;
+    background: #b4a6a6;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    .part {
+      width: 24%;
+      height: 24%;
+      background: #e6d5d5;
+      text-align: center;
+      line-height: 120px;
+      color: #fff;
+      font-size: 60px;
+      font-weight: bolder;
+    }
+    .num_2 {
+      background: #dcdada;
+    }
+    .num_4 {
+      background: #607D8B;
+    }
+    .num_8 {
+      background: #9E9E9E;
+    }
+    .num_16 {
+      background: #795548;
+    }
+    .num_32 {
+      background: #009688;
+    }
+    .num_64 {
+      background: #00bcd4;
+    }
+    .num_128 {
+      background: #03a9f4;
+    }
+    .num_256 {
+      background: #8bc34a;
+    }
+    .num_512 {
+      background: #cddc39;
+    }
+    .num_1024 {
+      background: #ff5722;
+      font-size: 45px;
+    }
+    .num_2048 {
+      background: #e91e63;
+      font-size: 45px;
+    }
+    .num_4096 {
+      background: #ffeb3b;
+      font-size: 45px;
+    }
+    .num_8192 {
+      background: #3f51b5;
+      font-size: 45px;
+    }
+    .num_16384 {
+      background: #9C27B0;
+      font-size: 35px;
+    }
+    .num_32768 {
+      background: #FF9800;
+      font-size: 35px;
+    }
+  }
 }
